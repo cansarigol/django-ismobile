@@ -5,6 +5,6 @@ class MobileControlMiddleware(object):
         self.get_response = get_response
 
     def __call__(self, request):
-        request.IS_MOBILE = get_is_mobil(request.META['HTTP_USER_AGENT'])
+        request.IS_MOBILE = get_is_mobil(request.META.get('HTTP_USER_AGENT'))
         response = self.get_response(request)
         return response
