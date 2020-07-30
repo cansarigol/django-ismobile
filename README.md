@@ -16,16 +16,6 @@ pip install django-ismobile
 
 ## Using
 
-Include to your INSTALLED_APPS:
-
-```
-INSTALLED_APPS = (
-    ...
-    'ismobile',
-    ...
-)
-```
-
 Include MobileControlMiddleware into your MIDDLEWARE:
 
 ```
@@ -34,4 +24,13 @@ MIDDLEWARE = (
     'ismobile.middleware.MobileControlMiddleware',
     ...
 )
+```
+
+## Config
+
+In order to change request attribute name, 
+set **IS_MOBILE_ATTR_NAME** in django **settings** file.
+
+```
+IS_MOBILE_ATTR_NAME="custom_name"
 ```
