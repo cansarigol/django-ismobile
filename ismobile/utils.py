@@ -1,6 +1,9 @@
 import re
 
-is_mobile_re = re.compile(r".*(iphone|mobile|androidtouch)", re.IGNORECASE)
+is_mobile_re = re.compile(
+    r".*(ip(hone|od|ad)|mobile|androidtouch|opera m(ob|in)i|(android|chrome).+mobile)",
+    re.IGNORECASE,
+)
 
 
 def get_is_mobil(http_user_agent):
